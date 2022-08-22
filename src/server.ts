@@ -1,7 +1,9 @@
 import express from 'express';
+import dotenv from 'dotenv';
 
 const app=express();
-const PORT=3049;
+dotenv.config();
+const PORT= process.env.PORT||3049;
 
 app.get ('/', (req:express.Request,res:express.Response)=>{
     res.send(user);
